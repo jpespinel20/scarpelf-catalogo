@@ -1,0 +1,308 @@
+/* ---------------------------------------------------------
+   Scarpe LF — Design tokens
+   Palette:
+     --ink     #241A14  deep espresso leather (text)
+     --hide    #EFE3CE  warm parchment (page background)
+     --card    #FFFCF6  card surface, lighter than hide
+     --tan     #B9834C  saddle tan (secondary accent)
+     --brass   #8A5A26  brass eyelet (primary accent / CTA)
+     --line    #D9C6A3  stitch / hairline color
+   Type:
+     Display — Fraunces (characterful serif, used for headings)
+     Body    — Inter (clean sans for reading)
+     Mono    — IBM Plex Mono (price tags, model codes — like a stamped label)
+--------------------------------------------------------- */
+
+:root{
+  --ink: #241A14;
+  --hide: #EFE3CE;
+  --card: #FFFCF6;
+  --tan: #B9834C;
+  --brass: #8A5A26;
+  --line: #D9C6A3;
+  --wa: #3F7A54;
+  --radius: 3px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--hide);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+/* ---------- stitch divider signature ---------- */
+.stitch{
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right, var(--line) 0 6px, transparent 6px 12px
+  );
+}
+.hero__stitch-top, .hero__stitch-bottom, .footer__stitch{
+  height: 10px;
+  background-image: repeating-linear-gradient(
+    to right, var(--ink) 0 7px, transparent 7px 15px
+  );
+  opacity: .18;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background: var(--ink);
+  color: var(--hide);
+  position: relative;
+  padding-bottom: 56px;
+}
+.topnav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 22px 24px 0;
+}
+.topnav__mark{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+}
+.topnav__toggle{
+  display:none;
+  background:transparent;
+  border:1px solid rgba(239,227,206,.4);
+  color: var(--hide);
+  padding:8px 14px;
+  border-radius: var(--radius);
+  font-family:'Inter',sans-serif;
+  font-size:.85rem;
+}
+
+.hero__content{
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 12px;
+  text-align:center;
+}
+.hero__eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--tan);
+  margin: 0 0 18px;
+}
+.hero__title{
+  font-family:'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  margin: 0 0 20px;
+  letter-spacing: -.01em;
+}
+.hero__title em{
+  font-style: italic;
+  font-weight: 500;
+  color: var(--tan);
+}
+.hero__sub{
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(239,227,206,.82);
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+.hero__cta{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: .92rem;
+  text-decoration:none;
+  border: 1px solid transparent;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.btn:hover{ transform: translateY(-1px); }
+.btn--primary{ background: var(--wa); color: #fff; }
+.btn--ghost{ border-color: rgba(239,227,206,.45); color: var(--hide); }
+
+/* ---------- model nav (sticky pills) ---------- */
+.modelnav{
+  position: sticky;
+  top:0;
+  z-index: 20;
+  display:flex;
+  gap: 8px;
+  overflow-x:auto;
+  padding: 12px 20px;
+  background: var(--hide);
+  border-bottom: 1px solid var(--line);
+}
+.modelnav a{
+  flex: 0 0 auto;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.78rem;
+  text-decoration:none;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.modelnav a:hover{ border-color: var(--brass); color: var(--brass); }
+
+/* ---------- catalog sections ---------- */
+main{ max-width: 1180px; margin: 0 auto; padding: 10px 20px 40px; }
+
+.section{
+  padding-top: 56px;
+  scroll-margin-top: 64px;
+}
+.section__head{
+  display:flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.section__model{
+  font-family:'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  margin:0;
+}
+.section__count{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.78rem;
+  color: var(--tan);
+}
+.section .stitch{ margin: 14px 0 28px; }
+
+.matgroup__label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--brass);
+  margin: 0 0 14px;
+  padding-top: 6px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display:flex;
+  flex-direction: column;
+}
+.card__imgwrap{
+  aspect-ratio: 3/4;
+  overflow:hidden;
+  background:#e8ddc7;
+}
+.card__imgwrap img{
+  width:100%; height:100%; object-fit: cover;
+  transition: transform .4s ease;
+}
+.card:hover .card__imgwrap img{ transform: scale(1.045); }
+
+.card__body{
+  padding: 14px 14px 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  flex:1;
+}
+.card__color{
+  font-weight: 600;
+  font-size: .96rem;
+  margin:0;
+}
+
+.card__bottom{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.tag{
+  position: relative;
+  display:inline-block;
+  background: var(--brass);
+  color: #fff;
+  font-family:'IBM Plex Mono', monospace;
+  font-weight:600;
+  font-size: .82rem;
+  padding: 6px 12px 6px 20px;
+  clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
+  -webkit-mask-image: radial-gradient(circle 2.5px at 9px 50%, transparent 2.5px, black 3px);
+  mask-image: radial-gradient(circle 2.5px at 9px 50%, transparent 2.5px, black 3px);
+}
+
+.card__wa{
+  flex:0 0 auto;
+  width: 34px; height:34px;
+  border-radius:50%;
+  background: var(--wa);
+  color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none;
+}
+.card__wa svg{ width:17px; height:17px; }
+
+/* ---------- footer ---------- */
+.footer{
+  background: var(--ink);
+  color: var(--hide);
+  text-align:center;
+  padding: 40px 24px 34px;
+}
+.footer__stitch{ margin-bottom: 26px; }
+.footer__brand{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.3rem;
+  margin: 0 0 8px;
+}
+.footer__line{ margin:0 0 6px; color: rgba(239,227,206,.85); font-size:.92rem; }
+.footer__fine{ margin:0; color: rgba(239,227,206,.5); font-size: .78rem; }
+
+/* ---------- floating WhatsApp button (mobile) ---------- */
+.floatwa{
+  position: fixed;
+  right: 18px; bottom: 18px;
+  width: 52px; height:52px;
+  border-radius:50%;
+  background: var(--wa);
+  color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  z-index: 30;
+}
+
+@media (max-width: 640px){
+  .hero__content{ padding: 48px 20px 8px; }
+  .section__model{ font-size: 1.6rem; }
+  .grid{ grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .card__body{ padding: 10px 10px 12px; }
+}

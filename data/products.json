@@ -1,0 +1,233 @@
+[
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Blanco Dorado",
+    "price": 150000,
+    "image": "images/01_LF-08_Blanco_Dorado.jpg"
+  },
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Blanco Plateado",
+    "price": 150000,
+    "image": "images/02_LF-08_Blanco_Plateado.jpg"
+  },
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Gris Pastel",
+    "price": 150000,
+    "image": "images/03_LF-08_Gris_Pastel.jpg"
+  },
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Miel",
+    "price": 150000,
+    "image": "images/04_LF-08_Miel.jpg"
+  },
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Negro",
+    "price": 150000,
+    "image": "images/05_LF-08_Negro.jpg"
+  },
+  {
+    "model": "LF-08",
+    "material": null,
+    "color": "Rosado",
+    "price": 150000,
+    "image": "images/06_LF-08_Rosado.jpg"
+  },
+  {
+    "model": "LF-11",
+    "material": "EVA",
+    "color": "Beige Cafe",
+    "price": 160000,
+    "image": "images/07_LF-11_Beige_Cafe.jpg"
+  },
+  {
+    "model": "LF-11",
+    "material": "EVA",
+    "color": "Beige Verde",
+    "price": 160000,
+    "image": "images/08_LF-11_Beige_Verde.jpg"
+  },
+  {
+    "model": "LF-11",
+    "material": "EVA",
+    "color": "Gris Pastel",
+    "price": 160000,
+    "image": "images/09_LF-11_Gris_Pastel.jpg"
+  },
+  {
+    "model": "LF-11",
+    "material": "EXPANSO",
+    "color": "Blanco Cafe",
+    "price": 150000,
+    "image": "images/10_LF-11_Blanco_Cafe.jpg"
+  },
+  {
+    "model": "LF-11",
+    "material": "EXPANSO",
+    "color": "Negro",
+    "price": 150000,
+    "image": "images/11_LF-11_Negro.jpg"
+  },
+  {
+    "model": "LF-12",
+    "material": "EVA",
+    "color": "Beige Cafe",
+    "price": 160000,
+    "image": "images/12_LF-12_Beige_Cafe.jpg"
+  },
+  {
+    "model": "LF-12",
+    "material": "EVA",
+    "color": "Beige Rosado",
+    "price": 160000,
+    "image": "images/13_LF-12_Beige_Rosado.jpg"
+  },
+  {
+    "model": "LF-12",
+    "material": "PVC",
+    "color": "Blanco Cafe",
+    "price": 150000,
+    "image": "images/14_LF-12_Blanco_Cafe.jpg"
+  },
+  {
+    "model": "LF-12",
+    "material": "PVC",
+    "color": "Blanco Verde",
+    "price": 150000,
+    "image": "images/15_LF-12_Blanco_Verde.jpg"
+  },
+  {
+    "model": "LF-12",
+    "material": "PVC",
+    "color": "Negro Dorado",
+    "price": 150000,
+    "image": "images/16_LF-12_Negro_Dorado.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "EVA",
+    "color": "Azul",
+    "price": 160000,
+    "image": "images/17_LF-13_Azul.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "EVA",
+    "color": "Grispastel Verde",
+    "price": 160000,
+    "image": "images/18_LF-13_Grispastel_Verde.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "EVA",
+    "color": "Negro",
+    "price": 160000,
+    "image": "images/19_LF-13_Negro.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "EVA",
+    "color": "Vaca",
+    "price": 160000,
+    "image": "images/20_LF-13_Vaca.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "PVC",
+    "color": "Blanco Dorado",
+    "price": 150000,
+    "image": "images/21_LF-13_Blanco_Dorado.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "PVC",
+    "color": "Blanco Plateado",
+    "price": 150000,
+    "image": "images/22_LF-13_Blanco_Plateado.jpg"
+  },
+  {
+    "model": "LF-13",
+    "material": "PVC",
+    "color": "Creepe Cafe",
+    "price": 150000,
+    "image": "images/23_LF-13_Creepe_Cafe.jpg"
+  },
+  {
+    "model": "LF-16",
+    "material": null,
+    "color": "Azul",
+    "price": 160000,
+    "image": "images/25_LF-16_Azul.jpg"
+  },
+  {
+    "model": "LF-16",
+    "material": null,
+    "color": "Beige",
+    "price": 160000,
+    "image": "images/24_LF-16_Beige.jpg"
+  },
+  {
+    "model": "LF-16",
+    "material": null,
+    "color": "Blanco Hueso",
+    "price": 160000,
+    "image": "images/28_LF-16_Blanco_Hueso.jpg"
+  },
+  {
+    "model": "LF-16",
+    "material": null,
+    "color": "Café",
+    "price": 160000,
+    "image": "images/26_LF-16_Café.jpg"
+  },
+  {
+    "model": "LF-16",
+    "material": null,
+    "color": "Camel",
+    "price": 160000,
+    "image": "images/27_LF-16_Camel.jpg"
+  },
+  {
+    "model": "LF-17",
+    "material": null,
+    "color": "Blanco",
+    "price": 160000,
+    "image": "images/30_LF-17_Blanco.jpg"
+  },
+  {
+    "model": "LF-17",
+    "material": null,
+    "color": "Cafe Miel",
+    "price": 160000,
+    "image": "images/29_LF-17_Cafe_Miel.jpg"
+  },
+  {
+    "model": "LF-17",
+    "material": null,
+    "color": "Negro",
+    "price": 160000,
+    "image": "images/31_LF-17_Negro.jpg"
+  },
+  {
+    "model": "LF-17",
+    "material": null,
+    "color": "Rosado",
+    "price": 160000,
+    "image": "images/32_LF-17_Rosado.jpg"
+  },
+  {
+    "model": "LF-17",
+    "material": null,
+    "color": "Verde",
+    "price": 160000,
+    "image": "images/33_LF-17_Verde.jpg"
+  }
+]
