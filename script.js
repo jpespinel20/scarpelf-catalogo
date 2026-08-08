@@ -9,16 +9,24 @@ const waIcon = `<svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.03 3C9
 
 function cardHTML(p, cardId) {
   const imgs = p.images && p.images.length ? p.images : [];
-  const dots = imgs.length > 1
+  const hasMultiple = imgs.length > 1;
+
+  const dots = hasMultiple
     ? `<div class="card__dots">${imgs.map((_, i) =>
         `<button class="card__dot${i === 0 ? " is-active" : ""}" data-card="${cardId}" data-idx="${i}" aria-label="Foto ${i + 1}"></button>`
       ).join("")}</div>`
     : "";
 
+  const arrows = hasMultiple
+    ? `<button class="card__arrow card__arrow--prev" data-card="${cardId}" data-dir="-1" aria-label="Foto anterior">‹</button>
+       <button class="card__arrow card__arrow--next" data-card="${cardId}" data-dir="1" aria-label="Foto siguiente">›</button>`
+    : "";
+
   return `
     <article class="card" id="${cardId}">
-      <div class="card__imgwrap">
+      <div class="card__imgwrap" data-swipe="${cardId}">
         <img src="${imgs[0] || ""}" alt="${p.model} color ${p.color}" loading="lazy" data-main-img="${cardId}">
+        ${arrows}
         ${dots}
       </div>
       <div class="card__body">
@@ -56,7 +64,7 @@ async function init() {
       return `<div class="grid">${list.map(p => {
         cardCounter++;
         const cardId = "card-" + cardCounter;
-        galleryData[cardId] = p.images;
+        galleryData[cardId] = { images: p.images, idx: 0 };
         return cardHTML(p, cardId);
       }).join("")}</div>`;
     }
@@ -86,21 +94,56 @@ async function init() {
     `;
   }
 
-  // gallery dot interactions (event delegation)
-  main.addEventListener("click", (e) => {
-    const dot = e.target.closest(".card__dot");
-    if (!dot) return;
-    const cardId = dot.dataset.card;
-    const idx = Number(dot.dataset.idx);
-    const imgs = galleryData[cardId];
-    if (!imgs) return;
+  function showImage(cardId, idx) {
+    const g = galleryData[cardId];
+    if (!g) return;
+    const total = g.images.length;
+    g.idx = (idx + total) % total; // wrap around both directions
 
     const img = main.querySelector(`img[data-main-img="${cardId}"]`);
-    if (img) img.src = imgs[idx];
+    if (img) img.src = g.images[g.idx];
 
     const card = document.getElementById(cardId);
-    card.querySelectorAll(".card__dot").forEach((d) => d.classList.remove("is-active"));
-    dot.classList.add("is-active");
+    card.querySelectorAll(".card__dot").forEach((d, i) => {
+      d.classList.toggle("is-active", i === g.idx);
+    });
+  }
+
+  // clicks: dots + prev/next arrows (event delegation)
+  main.addEventListener("click", (e) => {
+    const dot = e.target.closest(".card__dot");
+    if (dot) {
+      showImage(dot.dataset.card, Number(dot.dataset.idx));
+      return;
+    }
+    const arrow = e.target.closest(".card__arrow");
+    if (arrow) {
+      const cardId = arrow.dataset.card;
+      const dir = Number(arrow.dataset.dir);
+      showImage(cardId, galleryData[cardId].idx + dir);
+    }
+  });
+
+  // swipe with finger on touch devices
+  let touchStartX = 0;
+  let swipeCardId = null;
+
+  main.addEventListener("touchstart", (e) => {
+    const wrap = e.target.closest("[data-swipe]");
+    if (!wrap) return;
+    swipeCardId = wrap.dataset.swipe;
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  main.addEventListener("touchend", (e) => {
+    if (!swipeCardId) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const SWIPE_THRESHOLD = 40;
+    if (Math.abs(dx) > SWIPE_THRESHOLD) {
+      const dir = dx < 0 ? 1 : -1; // swipe left -> next, swipe right -> prev
+      showImage(swipeCardId, galleryData[swipeCardId].idx + dir);
+    }
+    swipeCardId = null;
   });
 }
 
