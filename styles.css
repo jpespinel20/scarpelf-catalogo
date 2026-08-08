@@ -1,34 +1,36 @@
 /* ---------------------------------------------------------
-   Scarpe LF — Design tokens
+   Scarpe LF — Design tokens (blanco & dorado, elegante)
    Palette:
-     --ink     #241A14  deep espresso leather (text)
-     --hide    #EFE3CE  warm parchment (page background)
-     --card    #FFFCF6  card surface, lighter than hide
-     --tan     #B9834C  saddle tan (secondary accent)
-     --brass   #8A5A26  brass eyelet (primary accent / CTA)
-     --line    #D9C6A3  stitch / hairline color
+     --ink      #1B1815  casi negro, para texto principal
+     --paper    #FFFFFF  fondo de página
+     --cream    #FAF7F1  fondo alterno muy sutil
+     --gold     #B08D46  dorado principal (acentos, líneas)
+     --gold-dp  #8C6C31  dorado oscuro (hover, texto sobre claro)
+     --gold-lt  #E8D9B5  dorado claro (fondos suaves, bordes)
+     --line     #E7E1D4  hairline neutro
    Type:
-     Display — Fraunces (characterful serif, used for headings)
-     Body    — Inter (clean sans for reading)
-     Mono    — IBM Plex Mono (price tags, model codes — like a stamped label)
+     Display — Fraunces (serif con carácter, para titulares)
+     Body    — Inter (sans limpio, lectura)
+     Label   — IBM Plex Mono (códigos de modelo, etiquetas — sin precios)
 --------------------------------------------------------- */
 
 :root{
-  --ink: #241A14;
-  --hide: #EFE3CE;
-  --card: #FFFCF6;
-  --tan: #B9834C;
-  --brass: #8A5A26;
-  --line: #D9C6A3;
+  --ink: #1B1815;
+  --paper: #FFFFFF;
+  --cream: #FAF7F1;
+  --gold: #B08D46;
+  --gold-dp: #8C6C31;
+  --gold-lt: #E8D9B5;
+  --line: #E7E1D4;
   --wa: #3F7A54;
-  --radius: 3px;
+  --radius: 2px;
 }
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
   margin:0;
-  background: var(--hide);
+  background: var(--paper);
   color: var(--ink);
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,84 +38,95 @@ body{
 img{ max-width:100%; display:block; }
 a{ color:inherit; }
 
-/* ---------- stitch divider signature ---------- */
-.stitch{
-  height: 1px;
-  background-image: repeating-linear-gradient(
-    to right, var(--line) 0 6px, transparent 6px 12px
-  );
+/* ---------- signature divider: fine gold rule with a diamond mark ---------- */
+.goldline{
+  display:flex;
+  align-items:center;
+  gap: 14px;
 }
-.hero__stitch-top, .hero__stitch-bottom, .footer__stitch{
-  height: 10px;
-  background-image: repeating-linear-gradient(
-    to right, var(--ink) 0 7px, transparent 7px 15px
-  );
-  opacity: .18;
+.goldline::before, .goldline::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.goldline__mark{
+  width:6px; height:6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex: 0 0 auto;
 }
 
-/* ---------- hero ---------- */
-.hero{
-  background: var(--ink);
-  color: var(--hide);
-  position: relative;
-  padding-bottom: 56px;
-}
+/* ---------- header / hero ---------- */
 .topnav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 22px 24px 0;
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--line);
 }
 .topnav__mark{
   font-family:'Fraunces', serif;
   font-weight:600;
-  font-size: 1.15rem;
-  letter-spacing: .02em;
+  font-size: 1.2rem;
+  letter-spacing: .03em;
+  color: var(--ink);
+}
+.topnav__mark em{
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold-dp);
 }
 .topnav__toggle{
   display:none;
   background:transparent;
-  border:1px solid rgba(239,227,206,.4);
-  color: var(--hide);
+  border:1px solid var(--gold-lt);
+  color: var(--gold-dp);
   padding:8px 14px;
   border-radius: var(--radius);
   font-family:'Inter',sans-serif;
   font-size:.85rem;
 }
 
+.hero{
+  background: var(--paper);
+  position: relative;
+  padding-bottom: 40px;
+}
 .hero__content{
   max-width: 720px;
   margin: 0 auto;
-  padding: 64px 24px 12px;
+  padding: 72px 24px 20px;
   text-align:center;
 }
 .hero__eyebrow{
   font-family:'IBM Plex Mono', monospace;
   font-size: .72rem;
-  letter-spacing: .12em;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--tan);
-  margin: 0 0 18px;
+  color: var(--gold-dp);
+  margin: 0 0 20px;
 }
 .hero__title{
   font-family:'Fraunces', serif;
   font-weight: 600;
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
   line-height: 1.05;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   letter-spacing: -.01em;
+  color: var(--ink);
 }
 .hero__title em{
   font-style: italic;
   font-weight: 500;
-  color: var(--tan);
+  color: var(--gold);
 }
 .hero__sub{
   font-size: 1.05rem;
-  line-height: 1.6;
-  color: rgba(239,227,206,.82);
+  line-height: 1.65;
+  color: #4A4238;
   max-width: 480px;
-  margin: 0 auto 32px;
+  margin: 0 auto 34px;
 }
 .hero__cta{
   display:flex;
@@ -124,17 +137,26 @@ a{ color:inherit; }
 
 .btn{
   display:inline-block;
-  padding: 13px 26px;
+  padding: 13px 28px;
   border-radius: var(--radius);
   font-weight: 600;
-  font-size: .92rem;
+  font-size: .9rem;
+  letter-spacing:.01em;
   text-decoration:none;
   border: 1px solid transparent;
-  transition: transform .15s ease, opacity .15s ease;
+  transition: transform .15s ease, opacity .15s ease, background .15s ease;
 }
 .btn:hover{ transform: translateY(-1px); }
-.btn--primary{ background: var(--wa); color: #fff; }
-.btn--ghost{ border-color: rgba(239,227,206,.45); color: var(--hide); }
+.btn--primary{ background: var(--ink); color: var(--gold-lt); }
+.btn--primary:hover{ background: #322c24; }
+.btn--ghost{ border-color: var(--gold-lt); color: var(--gold-dp); }
+.btn--ghost:hover{ border-color: var(--gold); background: var(--cream); }
+
+.hero__rule{
+  max-width: 220px;
+  margin: 8px auto 0;
+  padding: 0 24px;
+}
 
 /* ---------- model nav (sticky pills) ---------- */
 .modelnav{
@@ -144,8 +166,9 @@ a{ color:inherit; }
   display:flex;
   gap: 8px;
   overflow-x:auto;
-  padding: 12px 20px;
-  background: var(--hide);
+  padding: 14px 20px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
 .modelnav a{
@@ -153,19 +176,20 @@ a{ color:inherit; }
   font-family:'IBM Plex Mono', monospace;
   font-size:.78rem;
   text-decoration:none;
-  padding: 7px 14px;
+  padding: 7px 16px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--ink);
   white-space: nowrap;
+  transition: border-color .15s ease, color .15s ease;
 }
-.modelnav a:hover{ border-color: var(--brass); color: var(--brass); }
+.modelnav a:hover{ border-color: var(--gold); color: var(--gold-dp); }
 
 /* ---------- catalog sections ---------- */
 main{ max-width: 1180px; margin: 0 auto; padding: 10px 20px 40px; }
 
 .section{
-  padding-top: 56px;
+  padding-top: 60px;
   scroll-margin-top: 64px;
 }
 .section__head{
@@ -180,20 +204,21 @@ main{ max-width: 1180px; margin: 0 auto; padding: 10px 20px 40px; }
   font-weight: 700;
   font-size: 2.1rem;
   margin:0;
+  color: var(--ink);
 }
 .section__count{
   font-family:'IBM Plex Mono', monospace;
-  font-size:.78rem;
-  color: var(--tan);
+  font-size:.76rem;
+  color: var(--gold-dp);
 }
-.section .stitch{ margin: 14px 0 28px; }
+.section .goldline{ margin: 16px 0 30px; }
 
 .matgroup__label{
   font-family:'IBM Plex Mono', monospace;
-  font-size: .78rem;
+  font-size: .76rem;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--brass);
+  letter-spacing: .1em;
+  color: var(--gold-dp);
   margin: 0 0 14px;
   padding-top: 6px;
 }
@@ -201,91 +226,97 @@ main{ max-width: 1180px; margin: 0 auto; padding: 10px 20px 40px; }
 .grid{
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 22px;
-  margin-bottom: 34px;
+  gap: 24px;
+  margin-bottom: 36px;
 }
 
 .card{
-  background: var(--card);
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
   display:flex;
   flex-direction: column;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.card:hover{
+  border-color: var(--gold-lt);
+  box-shadow: 0 6px 22px rgba(176,141,70,.14);
 }
 .card__imgwrap{
   aspect-ratio: 3/4;
   overflow:hidden;
-  background:#e8ddc7;
+  background: var(--cream);
+  position:relative;
 }
 .card__imgwrap img{
   width:100%; height:100%; object-fit: cover;
-  transition: transform .4s ease;
+  transition: transform .4s ease, opacity .2s ease;
 }
-.card:hover .card__imgwrap img{ transform: scale(1.045); }
+.card:hover .card__imgwrap img{ transform: scale(1.04); }
+
+.card__dots{
+  position:absolute;
+  bottom: 10px; left:0; right:0;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+}
+.card__dot{
+  width:6px; height:6px;
+  border-radius:50%;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(27,24,21,.25);
+  padding:0;
+  cursor:pointer;
+}
+.card__dot.is-active{ background: var(--gold); border-color: var(--gold); }
 
 .card__body{
-  padding: 14px 14px 16px;
-  display:flex;
-  flex-direction:column;
-  gap: 10px;
-  flex:1;
-}
-.card__color{
-  font-weight: 600;
-  font-size: .96rem;
-  margin:0;
-}
-
-.card__bottom{
-  margin-top:auto;
+  padding: 15px 14px 17px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:10px;
 }
-
-.tag{
-  position: relative;
-  display:inline-block;
-  background: var(--brass);
-  color: #fff;
-  font-family:'IBM Plex Mono', monospace;
-  font-weight:600;
-  font-size: .82rem;
-  padding: 6px 12px 6px 20px;
-  clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
-  -webkit-mask-image: radial-gradient(circle 2.5px at 9px 50%, transparent 2.5px, black 3px);
-  mask-image: radial-gradient(circle 2.5px at 9px 50%, transparent 2.5px, black 3px);
+.card__color{
+  font-weight: 600;
+  font-size: .96rem;
+  margin:0;
+  color: var(--ink);
 }
 
 .card__wa{
   flex:0 0 auto;
-  width: 34px; height:34px;
+  width: 32px; height:32px;
   border-radius:50%;
   background: var(--wa);
   color:#fff;
   display:flex; align-items:center; justify-content:center;
   text-decoration:none;
 }
-.card__wa svg{ width:17px; height:17px; }
+.card__wa svg{ width:16px; height:16px; }
 
 /* ---------- footer ---------- */
 .footer{
   background: var(--ink);
-  color: var(--hide);
+  color: var(--gold-lt);
   text-align:center;
-  padding: 40px 24px 34px;
+  padding: 46px 24px 38px;
 }
-.footer__stitch{ margin-bottom: 26px; }
+.footer__rule{ max-width: 220px; margin: 0 auto 28px; padding: 0; }
+.footer__rule::before, .footer__rule::after{ background: linear-gradient(to right, transparent, var(--gold-dp), transparent); }
+.footer__rule .goldline__mark{ background: var(--gold); }
 .footer__brand{
   font-family:'Fraunces', serif;
   font-weight:600;
-  font-size:1.3rem;
-  margin: 0 0 8px;
+  font-style:italic;
+  font-size:1.4rem;
+  margin: 0 0 10px;
+  color: var(--gold-lt);
 }
-.footer__line{ margin:0 0 6px; color: rgba(239,227,206,.85); font-size:.92rem; }
-.footer__fine{ margin:0; color: rgba(239,227,206,.5); font-size: .78rem; }
+.footer__line{ margin:0 0 6px; color: rgba(232,217,181,.85); font-size:.92rem; }
+.footer__fine{ margin:0; color: rgba(232,217,181,.45); font-size: .78rem; }
 
 /* ---------- floating WhatsApp button (mobile) ---------- */
 .floatwa{
@@ -301,8 +332,8 @@ main{ max-width: 1180px; margin: 0 auto; padding: 10px 20px 40px; }
 }
 
 @media (max-width: 640px){
-  .hero__content{ padding: 48px 20px 8px; }
+  .hero__content{ padding: 52px 20px 10px; }
   .section__model{ font-size: 1.6rem; }
   .grid{ grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
-  .card__body{ padding: 10px 10px 12px; }
+  .card__body{ padding: 11px 11px 13px; }
 }
