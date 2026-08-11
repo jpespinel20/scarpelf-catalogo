@@ -306,5 +306,16 @@
       "images/33_LF-17_Verde_4.jpg",
       "images/33_LF-17_Verde_5.jpg"
     ]
+  },
+  {
+    "model": "LF-18",
+    "material": null,
+    "color": "Arena",
+    "images": [
+      "images/34_LF-17_Blanco.jpg",
+      "images/34_LF-17_Blanco1.jpg",
+      "images/34_LF-17_Blanco2.jpg",
+      "images/34_LF-17_Blanco3.jpg"
+    ]
   }
 ]
