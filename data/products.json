@@ -361,7 +361,52 @@
       "images/CAFE3.jpg",
       "images/CAFE4.jpg"
     ]
+  },
+  {
+    "model": "ECLISSE",
+    "material": null,
+    "color": "ROSADO🩷",
+    "images": [
+      "images/ROSADO4.jpg",
+      "images/ROSADO3.jpg",
+      "images/ROSADO2.jpg",
+      "images/ROSADO1.jpg"
+    ]
+  },
+  {
+    "model": "ECLISSE",
+    "material": null,
+    "color": "MIEL🧡",
+    "images": [
+      "images/ML4.jpg",
+      "images/ML3.jpg",
+      "images/ML2.jpg",
+      "images/ML1.jpg"
+    ]
+  },
+  {
+    "model": "ECLISSE",
+    "material": null,
+    "color": "NEGRO🖤",
+    "images": [
+      "images/NG4.jpg",
+      "images/NG3.jpg",
+      "images/NG2.jpg",
+      "images/NG1.jpg"
+    ]
+  },
+  {
+    "model": "ECLISSE",
+    "material": null,
+    "color": "VERDE💚",
+    "images": [
+      "images/VERDE4.jpg",
+      "images/VERDE3.jpg",
+      "images/VERDE2.jpg",
+      "images/VERDE1.jpg"
+    ]
   }
+
 ]
 
 
