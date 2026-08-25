@@ -308,14 +308,25 @@
     ]
   },
   {
-    "model": "LF-18",
+    "model": "CAPRI🤍",
     "material": null,
-    "color": "Arena",
+    "color": "ARENA",
     "images": [
       "images/34_LF-17_Blanco.jpg",
       "images/34_LF-17_Blanco1.jpg",
       "images/34_LF-17_Blanco2.jpg",
       "images/34_LF-17_Blanco3.jpg"
+    ]
+  },
+  {
+    "model": "CAPRI🧡",
+    "material": null,
+    "color": "MIEL",
+    "images": [
+      "images/MIEL1",
+      "images/MIEL2",
+      "images/MIEL3",
+      "images/MIEL4"
     ]
   }
 ]
