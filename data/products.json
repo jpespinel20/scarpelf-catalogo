@@ -308,9 +308,9 @@
     ]
   },
   {
-    "model": "CAPRI🤍",
+    "model": "CAPRI",
     "material": null,
-    "color": "ARENA",
+    "color": "ARENA🤍",
     "images": [
       "images/34_LF-17_Blanco.jpg",
       "images/34_LF-17_Blanco1.jpg",
@@ -319,14 +319,14 @@
     ]
   },
   {
-    "model": "CAPRI🧡",
+    "model": "CAPRI",
     "material": null,
-    "color": "MIEL",
+    "color": "MIEL🧡",
     "images": [
-      "images/MIEL1",
-      "images/MIEL2",
-      "images/MIEL3",
-      "images/MIEL4"
+      "images/MIEL1.jpg",
+      "images/MIEL2.jpg",
+      "images/MIEL3.jpg",
+      "images/MIEL4.jpg"
     ]
   }
 ]
