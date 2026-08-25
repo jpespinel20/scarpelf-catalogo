@@ -210,7 +210,11 @@
     "material": null,
     "color": "AZUL💙",
     "images": [
-      "images/25_LF-16_Azul_1.jpg"
+      "images/25_LF-16_Azul_1.jpg",
+      "images/AMOREAZUL1.jpg",
+      "images/AMOREAZUL2.jpg",
+      "images/AMOREAZUL3.jpg",
+      "images/AMOREAZUL4.jpg"
     ]
   },
   {
@@ -218,7 +222,11 @@
     "material": null,
     "color": "BEIGE",
     "images": [
-      "images/24_LF-16_Beige_1.jpg"
+      "images/24_LF-16_Beige_1.jpg",
+      "images/AMOREBG1.jpg",
+      "images/AMOREBG2.jpg",
+      "images/AMOREBG3.jpg",
+      "images/AMOREBG4.jpg"
     ]
   },
   {
@@ -226,7 +234,11 @@
     "material": null,
     "color": "GRIS X PASTEL🤍",
     "images": [
-      "images/28_LF-16_Blanco_Hueso_1.jpg"
+      "images/28_LF-16_Blanco_Hueso_1.jpg",
+      "images/AMOREGR1.jpg",
+      "images/AMOREGR2.jpg",
+      "images/AMOREGR3.jpg",
+      "images/AMOREGR4.jpg"
     ]
   },
   {
@@ -242,7 +254,11 @@
     "material": null,
     "color": "MIEL🧡",
     "images": [
-      "images/27_LF-16_Camel_1.jpg"
+      "images/27_LF-16_Camel_1.jpg",
+      "images/AMOREML1.jpg",
+      "images/AMOREML2.jpg",
+      "images/AMOREML3.jpg",
+      "images/AMOREML4.jpg"
     ]
   },
   {
