@@ -328,5 +328,41 @@
       "images/MIEL3.jpg",
       "images/MIEL4.jpg"
     ]
+  },
+  {
+    "model": "CAPRI",
+    "material": null,
+    "color": "CAFE X DORADO🤎",
+    "images": [
+      "images/CAFEXDORADO1.jpg",
+      "images/CAFEXDORADO2.jpg",
+      "images/CAFEXDORADO3.jpg",
+      "images/CAFEXDORADO4.jpg"
+    ]
+  },
+  {
+    "model": "CAPRI",
+    "material": null,
+    "color": "NEGRO🖤",
+    "images": [
+      "images/NEGRO1.jpg",
+      "images/NEGRO2.jpg",
+      "images/NEGRO3.jpg",
+      "images/NEGRO4.jpg"
+    ]
+  },
+  {
+    "model": "CAPRI",
+    "material": null,
+    "color": "CAFE🤎",
+    "images": [
+      "images/CAFE1.jpg",
+      "images/CAFE2.jpg",
+      "images/CAFE3.jpg",
+      "images/CAFE4.jpg"
+    ]
   }
 ]
+
+
+
