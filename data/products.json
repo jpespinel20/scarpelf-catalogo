@@ -367,10 +367,10 @@
     "material": null,
     "color": "ROSADO🩷",
     "images": [
-      "images/ROSADO4.jpg",
-      "images/ROSADO3.jpg",
-      "images/ROSADO2.jpg",
-      "images/ROSADO1.jpg"
+      "images/ROSADO4.jpeg",
+      "images/ROSADO3.jpeg",
+      "images/ROSADO2.jpeg",
+      "images/ROSADO1.jpeg"
     ]
   },
   {
@@ -378,10 +378,10 @@
     "material": null,
     "color": "MIEL🧡",
     "images": [
-      "images/ML4.jpg",
-      "images/ML3.jpg",
-      "images/ML2.jpg",
-      "images/ML1.jpg"
+      "images/ML4.jpeg",
+      "images/ML3.jpeg",
+      "images/ML2.jpeg",
+      "images/ML1.jpeg"
     ]
   },
   {
@@ -389,10 +389,10 @@
     "material": null,
     "color": "NEGRO🖤",
     "images": [
-      "images/NG4.jpg",
-      "images/NG3.jpg",
-      "images/NG2.jpg",
-      "images/NG1.jpg"
+      "images/NG4.jpeg",
+      "images/NG3.jpeg",
+      "images/NG2.jpeg",
+      "images/NG1.jpeg"
     ]
   },
   {
@@ -400,10 +400,10 @@
     "material": null,
     "color": "VERDE💚",
     "images": [
-      "images/VERDE4.jpg",
-      "images/VERDE3.jpg",
-      "images/VERDE2.jpg",
-      "images/VERDE1.jpg"
+      "images/VERDE4.jpeg",
+      "images/VERDE3.jpeg",
+      "images/VERDE2.jpeg",
+      "images/VERDE1.jpeg"
     ]
   }
 
