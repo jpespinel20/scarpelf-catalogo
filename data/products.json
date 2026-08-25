@@ -378,10 +378,10 @@
     "material": null,
     "color": "MIEL🧡",
     "images": [
-      "images/ML4.jpeg",
+      "images/ML1.jpeg",
       "images/ML3.jpeg",
       "images/ML2.jpeg",
-      "images/ML1.jpeg"
+      "images/ML4.jpeg"
     ]
   },
   {
@@ -389,10 +389,10 @@
     "material": null,
     "color": "NEGRO🖤",
     "images": [
-      "images/NG4.jpeg",
+      "images/NG1.jpeg",
       "images/NG3.jpeg",
       "images/NG2.jpeg",
-      "images/NG1.jpeg"
+      "images/NG4.jpeg"
     ]
   },
   {
@@ -400,13 +400,12 @@
     "material": null,
     "color": "VERDE💚",
     "images": [
-      "images/VERDE4.jpeg",
       "images/VERDE3.jpeg",
+      "images/VERDE4.jpeg",
       "images/VERDE2.jpeg",
       "images/VERDE1.jpeg"
     ]
   }
-
 ]
 
 
